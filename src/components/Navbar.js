@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Image, HStack, Button, VStack, useDisclosure, Avatar, Heading, CloseButton, Box } from '@chakra-ui/react';
+import { Flex, Text, Image, HStack, Button, VStack, useDisclosure, Avatar, Heading, CloseButton, Box } from '@chakra-ui/react';
 import { BiGridAlt } from 'react-icons/bi';
 import { BiSearchAlt } from 'react-icons/bi';
 import {
@@ -27,7 +27,7 @@ const Navbar = () => {
       justify='center'
       position='fixed'
       align='center'
-      bgOpacity="50%"
+      top={0}
     
       
 
@@ -40,14 +40,14 @@ const Navbar = () => {
 
 
 
-        <HStack as='nav' spacing='1px' >
+        <HStack as='nav' spacing='4px' >
 
-          <Button variant='ghost' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>HOME</Button>
-          <Button variant='ghost' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>DESTINATION</Button>
-          <Button variant='ghost' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>PACKAGE</Button>
-          <Button variant='ghost' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>BLOG</Button>
-          <Button variant='ghost' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>PAGES</Button>
-          <Button variant='ghost' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>CONTACT US</Button>
+          <Button variant='ghost' fontFamily='montserrat' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>HOME</Button>
+          <Button variant='ghost' fontFamily='montserrat' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>DESTINATION</Button>
+          <Button variant='ghost' fontFamily='montserrat' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>PACKAGE</Button>
+          <Button variant='ghost' fontFamily='montserrat' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>BLOG</Button>
+          <Button variant='ghost' fontFamily='montserrat' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>PAGES</Button>
+          <Button variant='ghost' fontFamily='montserrat' fontSize='sm' color='white' _hover={{ bgColor: "#464648", color: '#539d5c' }}>CONTACT US</Button>
 
         </HStack>
         <HStack spacing='5' as='nav' >
@@ -64,7 +64,7 @@ const Navbar = () => {
 
               <DrawerHeader >
                 <HStack justify='space-between'>
-                  <Heading>Destination</Heading>
+                  <Text fontSize='2xl' fontWeight='semibold' fontFamily='montserrat'>Destination</Text>
                   <Button variant='outline' bgColor='#54a15d' rounded='md' borderRadius='100px' onClick={onClose}>
                     <CloseButton size='xl' color='white' _hover={{color:'black'}}/>
                   </Button>
@@ -78,73 +78,62 @@ const Navbar = () => {
 
 
                 <HStack justify='space-around' >
-                  <VStack>
-                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/zena-al-yousef-FGMhOB3phgY-unsplash-1-1.png' />
-                      <Button height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}} >Belgium</Button>
+                  <VStack spacing='-8'>
+                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/zena-al-yousef-FGMhOB3phgY-unsplash-1-1.png' ></Avatar>
+                      <Button fontFamily='montserrat' height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}} >Belgium</Button>
                   </VStack>
-                  <VStack>
-                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/pexels-oleksandr-pidvalnyi-1031659-1-1.png' ></Avatar>
-                      <Button height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>Cambodia</Button>
-                    </VStack>
-                  </HStack>
-                <HStack justify='space-around' >
-                  <VStack>
-                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/11/hanson-lu-_8EFj6ISA08-unsplash-1-1-1.jpg' ></Avatar>
-                      <Button height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>China</Button>
-                  </VStack>
-                  <VStack>
-                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/11/cuda-destination.jpg' ></Avatar>
-                      <Button height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>Cuba</Button>
-                    </VStack>
-                  </HStack>
-                <HStack justify='space-around' >
-                  <VStack>
+                  <VStack spacing='-8'>
                       <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/11/frank-chou-P5a-O4ZCX7U-unsplash-1-1.jpg' ></Avatar>
-                      <Button  height='100px' width='200px'variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>England</Button>
-                  </VStack>
-                  <VStack>
-                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/Image-10-2-1.png' ></Avatar>
-                      <Button height='100px' width='200px' svariant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>GrandCanyon</Button>
+                      <Button fontFamily='montserrat' height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>Cambodia</Button>
                     </VStack>
                   </HStack>
                 <HStack justify='space-around' >
-                  <VStack>
-                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/11/shan-elahi-DDiLYt_F88w-unsplash-1-1-1.jpg' ></Avatar>
-                      <Button height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>India</Button>
+                  <VStack spacing='-8'>
+                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/11/hanson-lu-_8EFj6ISA08-unsplash-1-1-1.jpg' ></Avatar>
+                      <Button fontFamily='montserrat'  height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>China</Button>
                   </VStack>
-                  <VStack>
-                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/Facebook-2.png' ></Avatar>
-                      <Button height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>Newzealand</Button>
+                  <VStack spacing='-8'>
+                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/11/cuda-destination.jpg' ></Avatar>
+                      <Button fontFamily='montserrat' height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>Cuba</Button>
                     </VStack>
                   </HStack>
                 <HStack justify='space-around' >
-                  <VStack>
-                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/rafael-kellermann-streit-24LIw3veBi4-unsplash-1-1.png' ></Avatar>
-                      <Button height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>Paris</Button>
+                  <VStack spacing='-8'>
+                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/11/frank-chou-P5a-O4ZCX7U-unsplash-1-1.jpg' ></Avatar>
+                      <Button fontFamily='montserrat' height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>England</Button>
                   </VStack>
-                  <VStack>
+                  <VStack spacing='-8'>
                       <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/11/usa-destination.jpg' ></Avatar>
-                      <Button height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}> America</Button>
+                      <Button fontFamily='montserrat' height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}> Grand Canyon</Button>
+                    </VStack>
+                  </HStack>
+                <HStack justify='space-around' >
+                  <VStack spacing='-8'>
+                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/11/shan-elahi-DDiLYt_F88w-unsplash-1-1-1.jpg' ></Avatar>
+                      <Button fontFamily='montserrat' height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>India</Button>
+                  </VStack>
+                  <VStack spacing='-8'>
+                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/Facebook-2.png' ></Avatar>
+                      <Button fontFamily='montserrat' height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>Newzealand</Button>
+                    </VStack>
+                  </HStack>
+                <HStack justify='space-around' >
+                  <VStack spacing='-8'>
+                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/rafael-kellermann-streit-24LIw3veBi4-unsplash-1-1.png' ></Avatar>
+                      <Button fontFamily='montserrat' height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}>Paris</Button>
+                  </VStack>
+                  <VStack spacing='-8'>
+                      <Avatar size='lg' src='https://www.turio-wp.egenslab.com/wp-content/uploads/2022/11/usa-destination.jpg' ></Avatar>
+                      <Button fontFamily='montserrat' height='100px' width='200px' variant='outline' _hover={{bgColor:'#54a15d', color:'white'}}> America</Button>
                     </VStack>
                   </HStack>
 
-
-
-                   
-
-
-                 
-
-                    
-                 
 
                 </VStack>
               </DrawerBody>
 
 
-
-
-
+                   
             </DrawerContent>
           </Drawer>
           <Button variant='ghost' size='md' borderRadius='200' _hover={{ bgColor: '#539d5c', borderRadius: '200' }}> <BiSearchAlt color='white' size='22px' /> </Button>
@@ -169,3 +158,13 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+                 
+
+                    
+                 
+
+
+
+
