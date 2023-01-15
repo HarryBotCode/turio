@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Viñales Valley",
+        "image": "https://turio-wp.b-cdn.net/wp-content/uploads/2022/07/Destination-Image-10-1.jpg",
+        "price": "$59.00 "
+    },
+    {
+        "id": 2,
+        "name": "National Capitol of Cuba",
+        "image": "https://turio-wp.b-cdn.net/wp-content/uploads/2022/07/Destination-Image-09-1.jpg",
+        "price": "$59.00 "
+    },
+    {
+        "id": 3,
+        "name": "Franz Josef Glacier",
+        "image": "https://turio-wp.b-cdn.net/wp-content/uploads/2022/07/Destination-Image-08-1.jpg",
+        "price": "$59.00 "
+    }
+]
