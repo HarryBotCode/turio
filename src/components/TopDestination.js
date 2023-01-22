@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Heading, HStack, Image, SimpleGrid, Text, VStack } from '@chakra-ui/react'
+import { Flex, Heading,  Image, Text, VStack , Stack} from '@chakra-ui/react'
 import React from 'react'
 import destination1 from '../assets/destination1.png';
 import destination2 from '../assets/destination2.png';
@@ -13,6 +13,7 @@ const TopDestination = () => {
         <Flex
             mt='100px'
             justify='center'
+            px={{base:'20px', sm:'20px', md:'30px',lg:'30px',xl:'30px','2xl':'30px'}}
            
         >
             <VStack spacing='16'>
@@ -26,18 +27,18 @@ const TopDestination = () => {
                 </Text>
                 </VStack>
                 
-                <VStack spacing='6'>
-                    <HStack spacing='6' >
-                        <Image borderRadius='10px' src={destination1} h='320px' w='625px' transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1',maxW:'100%', overflow:'hidden' }}/>
-                        <Image borderRadius='10px' src={destination2} h='320px' w='300px' transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1'}} />
-                        <Image borderRadius='10px' src={destination3} h='320px' w='300px' transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1'}} />
-                    </HStack>
-                    <HStack spacing='6'>
-                        <Image borderRadius='10px' src={destination4} h='320px' w='300px' transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1'}} />
-                        <Image borderRadius='10px' src={destination5} h='320px' w='300px' transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1'}} />
-                        <Image borderRadius='10px' src={destination6} h='320px' w='625px' transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1'}} />
-                    </HStack>
-                </VStack>
+                <Stack spacing='6' >
+                    <Stack spacing='6' direction={{base:'column', sm:'column', md:'column', lg:'row', xl:'row', '2xl':'row'}}>
+                        <Image borderRadius='10px' src={destination1} h={{base:'350px',xl:'320px'}} w={{base:'500px',xl:'625px'}} transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1',maxW:'100%', overflow:'hidden' }}/>
+                        <Image borderRadius='10px' src={destination2} h={{base:'350px',xl:'320px'}} w={{base:'500px',xl:'300px'}} transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1'}} />
+                        <Image borderRadius='10px' src={destination3} h={{base:'350px',xl:'320px'}} w={{base:'500px',xl:'300px'}} transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1'}} />
+                    </Stack>
+                    <Stack spacing='6' direction={{base:'column', sm:'column', md:'column', lg:'row', xl:'row', '2xl':'row'}}>
+                        <Image borderRadius='10px' src={destination4} h={{base:'350px',xl:'320px'}} w={{base:'500px',xl:'300px'}} transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1'}} />
+                        <Image borderRadius='10px' src={destination5} h={{base:'350px',xl:'320px'}} w={{base:'500px',xl:'300px'}} transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1'}} />
+                        <Image borderRadius='10px' src={destination6} h={{base:'350px',xl:'320px'}} w={{base:'500px',xl:'625px'}} transitionDuration='.3s'  _hover={{transform:'auto', scale:'1.1'}} />
+                    </Stack>
+                </Stack>
 
 
                 

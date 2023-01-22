@@ -1,4 +1,4 @@
-import { Button, Card, Flex, Heading, HStack, SimpleGrid, Stack, VStack, Image, Text, Grid, Container, IconButton } from '@chakra-ui/react'
+import { Button, Card, Flex, Heading, HStack, SimpleGrid, Stack, VStack, Image, Text, IconButton } from '@chakra-ui/react'
 import React from 'react'
 import reviewproducts from './reviewproducts.json';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
@@ -16,17 +16,17 @@ const Review = () => {
     >
         
  
- <VStack px='310px' mt='20' mb='10' spacing='10' >
+ <VStack px={{base:'20px', sm:'20px', md:'30px',lg:'30px',xl:'30px','2xl':'30px'}} mt='20' mb='10' spacing='10' >
                
-                <VStack >
+                <VStack px={{md:'30px'}}>
                 
-                <HStack spacing='500px'>
+                <HStack spacing={{md:'200px'}}>
                     <Stack  >
                        
-                    <Heading  as='h1' size='lg' fontSize='46px' fontWeight='extrabold' color='white' fontFamily='barlow'>Upcoming Best Tours</Heading>
-                     <Text fontFamily='montserrat' maxW='700px' color='white'>Duis rutrum nisl urna maecenas vel libero faucibus nisi vene natis hendrerit aid lectus suspendissendt.</Text>
+                    <Heading  as='h1' size='lg' fontSize='46px' fontWeight='extrabold' color='white' fontFamily='barlow' textAlign={{base:'center',sm:'center',md:'none', lg:'unset', xl:'unset', '2xl':'unset'}}>Upcoming Best Tours</Heading>
+                     <Text fontFamily='montserrat' maxW='700px' color='white' textAlign={{base:'center',sm:'center',md:'unset', lg:'unset', xl:'unset', '2xl':'unset'}}>Duis rutrum nisl urna maecenas vel libero faucibus nisi vene natis hendrerit aid lectus suspendissendt.</Text>
                     </Stack>
-                    <HStack spacing='12'>
+                    <HStack spacing='12' display={{base:'none',sm:'none',md:'unset', lg:'unset',xl:'unset', '2xl':'unset'}}>
                     <IconButton variant='ghost' color='#4bbc58' _hover={{variant:'ghost', bgColor:'#4bbc58', color:'white', bg:'none'}} icon={<BsArrowLeftCircle  size='28px'/>} >  </IconButton>
                     <IconButton variant='ghost' color='#4bbc58' _hover={{variant:'ghost', bgColor:'#4bbc58', color:'white', bg:'none'}} icon={<BsArrowRightCircle  size='28px'/>} >  </IconButton>
                     
@@ -38,7 +38,7 @@ const Review = () => {
    
        
                 
-                <SimpleGrid columns={3} spacing='6'>
+                <SimpleGrid  spacing='6' columns={{base:1,sm:1,md:2,xl:3, '2xl':3}}>
 
                
                 
@@ -63,8 +63,8 @@ const Review = () => {
                             <Stack spacing='4' px='4' mb='6' mt='4'>
 
                                 <Heading as='h3' size='md' color='#2d373c'>{data.name}</Heading>
-                                <HStack spacing='16' >
-                                    <Button borderRadius='100px' border='1px' borderColor='#54a15d' w='160px' h='40px' fontSize='15px' bgColor='transparent' fontFamily='montserrat' variant='outline' color='#54a15d' _hover={{ bgColor: '#54a15d', variant: 'outline', color: 'white' }}  >BOOK NOW &nbsp;&nbsp;&nbsp;<ArrowForwardIcon size='2px'/></Button>
+                                <HStack spacing={{base:'10', sm:'10', md:'16',lg:'16',xl:'16','2xl':'16'}} >
+                                    <Button borderRadius='100px' border='1px' borderColor='#54a15d' w='160px' h='40px' fontSize={{base:'12px', sm:'12px', md:'15px',lg:'15px',xl:'15px','2xl':'15px'}} bgColor='transparent' fontFamily='montserrat' variant='outline' color='#54a15d' _hover={{ bgColor: '#54a15d', variant: 'outline', color: 'white' }}  >BOOK NOW &nbsp;&nbsp;&nbsp;<ArrowForwardIcon size='2px'/></Button>
                                     <Stack spacing='0'>
                                         <Text fontFamily='montserrat' fontWeight='semibold' fontSize='15px' color='#2d373c'>From</Text>
                                         <HStack>

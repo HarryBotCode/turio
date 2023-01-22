@@ -5,14 +5,15 @@ import { FiClock } from 'react-icons/fi';
 import products from './products.json';
 import { extendTheme } from '@chakra-ui/react'
 
+
 // 2. Update the breakpoints as key-value pairs
 const breakpoints = {
-  sm: '320px',
-  md: '768px',
-  lg: '960px',
-  xl: '1200px',
-  '2xl': '1536px',
-}
+    sm: '30em',
+    md: '48em',
+    lg: '62em',
+    xl: '80em',
+    '2xl': '96em',
+  }
 
 // 3. Extend the theme
 const theme = extendTheme({ breakpoints })
@@ -24,6 +25,7 @@ const Cards = () => {
         w='100%'
         mt='20'
         
+        
         >
         
         
@@ -34,12 +36,15 @@ const Cards = () => {
            
             <VStack mt='100' spacing='20' >
             
-               <VStack>
+               <VStack px={{base:'20px',sm:'20px',md:'100px',lg:'100px',xl:'100px'}} >
                 
-                <HStack spacing='400px'>
-                    <Stack  >
+                
+                    
+                    <Stack  spacing={{base:'40px', sm:'40px', md:'none',lg:'none',xl:'none','2xl':'none'}} direction={{base:'column', sm:'column', md:'column', lg:'row', xl:'row', '2xl':'row'}}>
+                    
+                    <Stack spacing='20px'   >
                        
-                                <Heading as='h1' size='lg' fontSize='46px' fontWeight='extrabold' color='#2d373c' fontFamily='barlow'>
+                                <Heading as='h1' size='lg' fontSize={{base:'35px',sm:'35px',md:'46px',lg:'46px',xl:'46px','2xl':'46px'}} fontWeight='extrabold' color='#2d373c' fontFamily='barlow'>
                                     Best Selling Tours
                                 </Heading>
                                 <Text fontFamily='montserrat' maxW='700px' color='#2d373c'>
@@ -47,17 +52,19 @@ const Cards = () => {
                                         Suspendissendt blandit interdum. Sed pellentesque at nunc eget consectetur.
                                 </Text>
                     </Stack>
-                    <Button borderRadius='0px' border='2px' borderColor='#54a15d' w='180px' h='45px' fontSize='18px' bgColor='#54a15d' variant='outline' color='white' fontFamily='montserrat' _hover={{ bgColor: 'transparent', variant: 'outline', color: '#54a15d' }}>View All Tour</Button>
-                </HStack>
-
+                    <Button mt='100px' borderRadius='0px' border='2px' borderColor='#54a15d' w='180px' h='45px' fontSize='18px' bgColor='#54a15d' variant='outline' color='white' fontFamily='montserrat' _hover={{ bgColor: 'transparent', variant: 'outline', color: '#54a15d' }}>View All Tour</Button>
+                    
+                 
+                    </Stack>
+                
+                
                 </VStack> 
               
 
                 {/* CARDS */}
+                <VStack px={{base:'20px', sm:'20px', md:'30px',lg:'30px',xl:'30px','2xl':'30px'}} >
                 
-               <VStack px='310px'>
-                
-                <SimpleGrid columns={3} spacing='6'>
+                <SimpleGrid w='100%' columns={{base:1,sm:1,md:2,xl:3, '2xl':3}} spacing='4'>
 
                
                 
@@ -82,8 +89,8 @@ const Cards = () => {
                             <Stack spacing='4' px='4' mb='6' mt='4'>
 
                                 <Heading as='h3' size='md' color='#2d373c'>{data.name}</Heading>
-                                <HStack spacing='16' >
-                                    <Button borderRadius='100px' border='1px' borderColor='#54a15d' w='160px' h='40px' fontSize='15px' bgColor='transparent' fontFamily='montserrat' variant='outline' color='#54a15d' _hover={{ bgColor: '#54a15d', variant: 'outline', color: 'white' }}  >BOOK NOW &nbsp;&nbsp;&nbsp;<ArrowForwardIcon size='2px'/></Button>
+                                <HStack spacing={{base:'10', sm:'10', md:'16',lg:'16',xl:'16','2xl':'16'}} >
+                                    <Button borderRadius='100px' border='1px' borderColor='#54a15d' w='160px' h='40px' fontSize={{base:'12px', sm:'12px', md:'15px',lg:'15px',xl:'15px','2xl':'15px'}} bgColor='transparent' fontFamily='montserrat' variant='outline' color='#54a15d' _hover={{ bgColor: '#54a15d', variant: 'outline', color: 'white' }}  >BOOK NOW &nbsp;&nbsp;&nbsp;<ArrowForwardIcon size='2px'/></Button>
                                     <Stack spacing='0'>
                                         <Text fontFamily='montserrat' fontWeight='semibold' fontSize='15px' color='#2d373c'>From</Text>
                                         <HStack>
@@ -106,29 +113,10 @@ const Cards = () => {
                         <Button borderRadius='100px' border='2px' borderColor='#54a15d' w='150px' h='45px' fontSize='15px' bgColor='#54a15d' variant='outline' color='white' fontFamily='montserrat' _hover={{ bgColor: 'transparent', variant: 'outline', color: '#54a15d' }}>View All</Button>
                         
         </VStack>
+               
         </Flex>
 
     )
 }
 
 export default Cards
-                           
-                            
-                              
-                                    
-                             
-
-                           
-                        
-
-
-
-
-
-
-
-            
-          
-            
-               
-  

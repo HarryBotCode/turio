@@ -12,47 +12,51 @@ import {TfiLocationPin} from 'react-icons/tfi';
 const Footer = () => {
   return (
     <>
-      <VStack spacing='-520px'>
+     
         <Flex
-          mt='100'
           bgImage={bgImage2}
           bgBlendMode='hue'
           backgroundSize='center'
           backgroundRepeat="no-repeat"
           backgroundPosition='center'
-          h='90vh'
+          h={{base:'70vh', sm:'70vh', md:'50vh',lg:'30vh',xl:'30vh','2xl':'30vh'}}
           w='100%'
           justify='space-around'
         >
-          <VStack py='100px'>
-            <HStack spacing='130px'>
+          <VStack py='100px' >
+            <Stack spacing={{base:'40px', sm:'40px', md:'40px',lg:'40px',xl:'130px','2xl':'130px'}} px={{base:'10px',sm:'10px', md:'none', lg:'none', xl:'none', '2xl':'none'}} direction={{base:'column', sm:'column', md:'row', lg:'row',xl:'row', '2xl':'row'}}>
               <Stack spacing='4'>
-                <Heading as='h1' size='2xl' color='white' fontFamily='barlow' fontWeight='extrabold' >JOIN US FOR MORE UPDATE</Heading>
-                <Text fontSize='sm' color='white' fontFamily='montserrat' >Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus.<br></br>
+                <Heading as='h1' textAlign={{base:'center',sm:'center',md:'none', lg:'none', xl:'none', '2xl':'none'}} size={{base:'xl', sm:'xl', md:'2xl',lg:'2xl',xl:'2xl','2xl':'2xl'}} color='white' fontFamily='barlow' fontWeight='extrabold' >JOIN US FOR MORE UPDATE</Heading>
+                <Text fontSize='sm' color='white' fontFamily='montserrat' textAlign={{base:'center',sm:'center',md:'none', lg:'none', xl:'none', '2xl':'none'}} >Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus.<br></br>
                   Suspendissendt blandit interdum.</Text>
               </Stack>
               <VStack>
                 <Button w='150px' h='50px' fontFamily='montserrat' borderRadius='0' fontSize='18px' ghost='solid' bgColor='#54a15d' color='white' border='2px' borderColor='#54a15d' _hover={{ bgColor: 'transparent', color: '#54a15d', border: '2px', borderColor: '#54a15d' }}>Join Now</Button>
               </VStack>
-            </HStack>
+            </Stack>
           </VStack>
 
 
         </Flex>
+        
+       
+        
+        
+        
+   
 
-        <Flex bgColor='#1d2326'
-          opacity='.95'
-          mt='0'
+      <Flex bgColor='#1d2326'
+          opacity='.9'
           py='0'
-          h='50vh'
+          h={{base:'220vh', sm:'220vh', md:'150vh',lg:'150vh',xl:'65vh','2xl':'65vh'}}
           w='100%'
-          px='340px'
+          px={{base:'10px', sm:'10px', md:'10px',lg:'10px',xl:'100px','2xl':'100px'}}
           
 
         >
-          <HStack spacing='14'>
-          <VStack mt='100px' mb='100px'>
-         
+           <Stack spacing={{base:'40px', sm:'40px', md:'40px',lg:'40px',xl:'40px','2xl':'150px'}} mt={{base:'100px', sm:'100px', md:'50px',lg:'50px',xl:'100px','2xl':'140px'}} direction={{base:'column',sm:'column',md:'column',lg:'column',xl:'row','2xl':'row'}}>
+          
+        
             <Stack>
               <Stack spacing='8'>
                 <Heading><Image src={'https://www.turio-wp.egenslab.com/wp-content/uploads/2022/10/logo2-1.svg'} ></Image></Heading>
@@ -67,21 +71,21 @@ const Footer = () => {
             </Stack>
           
          
-          </VStack>
+         
           
-          <VStack mt='100px' mb='100px'>
+          
          
            
               <Stack spacing='8'>
                 <Heading color='white' fontFamily='barlow' as='h1' size='lg' fontWeight='extrabold'>Quick Links</Heading>
                
                 <List spacing='2'>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>Guide</Text></ListItem>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>Blog Standard</Text></ListItem>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>Contact Us</Text></ListItem>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>Destination</Text></ListItem>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>FAQ</Text></ListItem>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>Gallery</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button' _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}}  transition='.4s' >Guide</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button'  _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}}  transition='.4s'>Blog Standard</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button' _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}}  transition='.4s'>Contact Us</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button' _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}}  transition='.4s'>Destination</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button' _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}}  transition='.4s'>FAQ</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button' _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}}  transition='.4s'>Gallery</Text></ListItem>
                 </List>
                 
                 
@@ -90,21 +94,21 @@ const Footer = () => {
             
           
          
-          </VStack>
           
-          <VStack mt='100px' mb='100px'>
+          
+          
           
            
               <Stack spacing='8'>
                 <Heading color='white' fontFamily='barlow' as='h1' size='lg' fontWeight='extrabold'>Tour Type</Heading>
                
                 <List spacing='2'>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>Adventur Tour</Text></ListItem>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>Couple Tour</Text></ListItem>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>Family Tour</Text></ListItem>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>Group Tour</Text></ListItem>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>Holiday Tour</Text></ListItem>
-                  <ListItem><Text color='white' fontFamily='montserrat' as='button'>Village Tour</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button' _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}} transition='.4s'>Adventur Tour</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button' _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}} transition='.4s'>Couple Tour</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button' _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}} transition='.4s'>Family Tour</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button' _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}} transition='.4s'>Group Tour</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button' _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}} transition='.4s'>Holiday Tour</Text></ListItem>
+                  <ListItem><Text color='white' fontFamily='montserrat' as='button' _hover={{color:'#54a15d', transition:'.2s', transform:'translateX(10px)'}} transition='.4s'>Village Tour</Text></ListItem>
                 </List>
                 
                 
@@ -113,9 +117,9 @@ const Footer = () => {
             
           
           
-          </VStack>
-          <VStack mt='100px' mb='100px'>
-          <Stack>
+          
+          
+          
            
               <Stack spacing='8'>
                 <Heading color='white' fontFamily='barlow' as='h1' size='lg' fontWeight='extrabold'>Contact Us</Heading>
@@ -144,23 +148,20 @@ const Footer = () => {
               
             
           
-              </Stack>
+             
+              
           
-          </VStack>
-          </HStack>
-         
+          
+          </Stack>
         </Flex>
-       
-        
-        
-      </VStack>
-      <Flex justify='center' mt='3'>
+      <Flex justify='center' bgColor='blue.600' py='4'>
         <Text color='white' fontFamily='montserrat' fontSize='sm'>Copyright 2022 Turio | Design By Egens Lab</Text>
       </Flex>
+
+
       
     </>
   )
 }
 
 export default Footer
-
